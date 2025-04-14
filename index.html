@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sachin Gupta - Product Manager</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <style>
       html {
         scroll-behavior: smooth;
       }
-      header.sticky {
+      header.sticky, nav.sticky {
         position: sticky;
         top: 0;
         z-index: 50;
@@ -29,15 +31,17 @@
       </div>
     </header>
 
-    <main class="max-w-4xl mx-auto px-6 py-12">
-      <!-- Navigation -->
-      <nav class="flex justify-center space-x-6 mb-12 text-lg">
+    <!-- Sticky Navigation -->
+    <nav class="sticky top-16 bg-white shadow-md py-3 px-4 z-40">
+      <div class="max-w-4xl mx-auto flex justify-center space-x-6 text-lg">
         <a href="#about" class="text-gray-700 hover:text-black">About</a>
         <a href="#projects" class="text-gray-700 hover:text-black">Projects</a>
         <a href="#contact" class="text-gray-700 hover:text-black">Contact</a>
         <a href="#resume" class="text-gray-700 hover:text-black">Resume</a>
-      </nav>
+      </div>
+    </nav>
 
+    <main class="max-w-4xl mx-auto px-6 py-12">
       <!-- About Section -->
       <section id="about" class="mb-20">
         <h2 class="text-3xl font-semibold mb-4">About Me</h2>
@@ -49,8 +53,9 @@
       <!-- Projects Section -->
       <section id="projects" class="mb-20">
         <h2 class="text-3xl font-semibold mb-6">Projects</h2>
-        <div class="space-y-10">
-          <div>
+        <div class="space-y-16">
+          <div data-aos="fade-up">
+            <img src="https://source.unsplash.com/600x300/?technology,code" alt="UIDAI Project" class="w-full rounded mb-4">
             <h3 class="text-xl font-bold text-gray-800">UIDAI eKYC Integration</h3>
             <p class="text-gray-700">
               Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.
@@ -61,7 +66,8 @@
             </p>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-delay="100">
+            <img src="https://source.unsplash.com/600x300/?app,ui" alt="LOS Project" class="w-full rounded mb-4">
             <h3 class="text-xl font-bold text-gray-800">Decommissioning Legacy LOS</h3>
             <p class="text-gray-700">
               Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. Created data flows, screens, and a new BRE to handle complex loan logic.
@@ -72,7 +78,8 @@
             </p>
           </div>
 
-          <div>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <img src="https://source.unsplash.com/600x300/?government,business" alt="Govt Project" class="w-full rounded mb-4">
             <h3 class="text-xl font-bold text-gray-800">Managing Government Business</h3>
             <p class="text-gray-700">
               Led internal systems to support government lending programs like NRLM, NULM, and SHG. Improved PSL tracking and SMF categorization.
@@ -89,6 +96,7 @@
       <section id="contact" class="mb-20">
         <h2 class="text-3xl font-semibold mb-4">Contact</h2>
         <p class="text-lg">Email: <a href="mailto:ceofrontlane@gmail.com" class="text-blue-600">ceofrontlane@gmail.com</a></p>
+        <p class="text-lg mt-2">LinkedIn: <a href="https://www.linkedin.com/in/sachingupta" class="text-blue-600" target="_blank">linkedin.com/in/sachingupta</a></p>
       </section>
 
       <!-- Resume Section -->
@@ -105,5 +113,9 @@
     <footer class="bg-black text-white py-6 text-center">
       &copy; 2025 Sachin Gupta. All rights reserved.
     </footer>
+
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
