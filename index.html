@@ -4,129 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sachin Gupta - Product Manager</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <style>
-      /* Custom styles for the Apple-like design */
+      html {
+        scroll-behavior: smooth;
+      }
+      header.sticky {
+        position: sticky;
+        top: 0;
+        z-index: 50;
+      }
       .hero {
-        background: linear-gradient(145deg, #3f8ad1, #1e5a85);
+        background: linear-gradient(145deg, #1a1a1a, #444);
         color: white;
-        border-radius: 20px;
-      }
-      .hero h1, .hero p {
-        text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
-      }
-      .btn {
-        background-color: #007bff;
-        color: white;
-        padding: 12px 24px;
-        border-radius: 30px;
-        text-transform: uppercase;
-        font-weight: bold;
-        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
-        transition: all 0.3s;
-      }
-      .btn:hover {
-        background-color: #0056b3;
-        box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
       }
     </style>
   </head>
-  <body class="bg-gray-50 text-gray-900 font-sans leading-normal">
-    <!-- Header Section -->
-    <header class="hero py-20 px-8 text-center mb-16">
-      <h1 class="text-5xl font-extrabold">Sachin Gupta</h1>
-      <p class="text-xl mt-4">Building financial products for B2B and B2C</p>
+  <body class="bg-gray-100 text-gray-900 font-sans">
+    <!-- Sticky Header -->
+    <header class="hero sticky py-6 px-8 shadow-md">
+      <div class="max-w-7xl mx-auto flex flex-col items-center">
+        <h1 class="text-4xl font-bold">Sachin Gupta</h1>
+        <p class="text-lg mt-1">Building financial products for B2B and B2C</p>
+      </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="container mx-auto px-6">
-
-      <!-- Navigation Bar -->
-      <nav class="flex justify-center space-x-8 mb-12">
-        <a href="#about" class="text-xl text-blue-500 hover:text-blue-700">About</a>
-        <a href="#projects" class="text-xl text-blue-500 hover:text-blue-700">Projects</a>
-        <a href="#contact" class="text-xl text-blue-500 hover:text-blue-700">Contact</a>
-        <a href="#resume" class="text-xl text-blue-500 hover:text-blue-700">Resume</a>
+    <main class="max-w-4xl mx-auto px-6 py-12">
+      <!-- Navigation -->
+      <nav class="flex justify-center space-x-6 mb-12 text-lg">
+        <a href="#about" class="text-gray-700 hover:text-black">About</a>
+        <a href="#projects" class="text-gray-700 hover:text-black">Projects</a>
+        <a href="#contact" class="text-gray-700 hover:text-black">Contact</a>
+        <a href="#resume" class="text-gray-700 hover:text-black">Resume</a>
       </nav>
 
       <!-- About Section -->
       <section id="about" class="mb-20">
-        <h2 class="text-3xl font-semibold text-center mb-6">About Me</h2>
-        <p class="text-lg text-gray-600 text-center leading-relaxed max-w-3xl mx-auto">
-          I am a passionate product manager with a focus on building innovative and user-friendly financial products. With a strong background in both B2B and B2C solutions, I work to create seamless user journeys that drive customer satisfaction and business success.
+        <h2 class="text-3xl font-semibold mb-4">About Me</h2>
+        <p class="text-gray-700 text-lg">
+          Product professional with experience leading digital transformation in banking, integrating eKYC, managing government initiatives, and improving customer onboarding flows.
         </p>
       </section>
 
       <!-- Projects Section -->
       <section id="projects" class="mb-20">
-        <h2 class="text-3xl font-semibold text-center mb-6">Projects</h2>
-        <p class="text-lg text-gray-600 text-center mb-6">Here are some of the major projects I’ve worked on:</p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-
-          <!-- Project 1: UIDAI eKYC Integration -->
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-bold text-blue-600">UIDAI eKYC Integration</h3>
-            <p class="text-gray-600 mt-2">
-              Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication.
-              Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.
+        <h2 class="text-3xl font-semibold mb-6">Projects</h2>
+        <div class="space-y-10">
+          <div>
+            <h3 class="text-xl font-bold text-gray-800">UIDAI eKYC Integration</h3>
+            <p class="text-gray-700">
+              Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.
             </p>
             <p class="mt-1 font-medium">Outcome:</p>
-            <p class="text-gray-600">
+            <p class="text-gray-700">
               Enabled the bank’s first vertical using UIDAI API, saving over ₹12L annually.
             </p>
           </div>
 
-          <!-- Project 2: Decommissioning Legacy LOS -->
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-bold text-blue-600">Decommissioning Legacy LOS</h3>
-            <p class="text-gray-600 mt-2">
-              Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. 
-              Created data flows, screens, and a new BRE to handle complex loan logic.
+          <div>
+            <h3 class="text-xl font-bold text-gray-800">Decommissioning Legacy LOS</h3>
+            <p class="text-gray-700">
+              Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. Created data flows, screens, and a new BRE to handle complex loan logic.
             </p>
             <p class="mt-1 font-medium">Outcome:</p>
-            <p class="text-gray-600">
+            <p class="text-gray-700">
               Delivered a flexible, modern lending system—reduced tech debt and enabled faster launches.
             </p>
           </div>
 
-          <!-- Project 3: Managing Government Business -->
-          <div class="bg-white shadow-lg rounded-lg p-6">
-            <h3 class="text-xl font-bold text-blue-600">Managing Government Business</h3>
-            <p class="text-gray-600 mt-2">
-              Led internal systems to support government lending programs like NRLM, NULM, and SHG. 
-              Improved PSL tracking and SMF categorization.
+          <div>
+            <h3 class="text-xl font-bold text-gray-800">Managing Government Business</h3>
+            <p class="text-gray-700">
+              Led internal systems to support government lending programs like NRLM, NULM, and SHG. Improved PSL tracking and SMF categorization.
             </p>
             <p class="mt-1 font-medium">Outcome:</p>
-            <p class="text-gray-600">
+            <p class="text-gray-700">
               Helped the bank stay compliant with RBI PSL mandates and reduce manual intervention.
             </p>
           </div>
-
         </div>
       </section>
 
       <!-- Contact Section -->
       <section id="contact" class="mb-20">
-        <h2 class="text-3xl font-semibold text-center mb-6">Contact</h2>
-        <p class="text-lg text-center mb-6">Feel free to get in touch with me for any inquiries, collaboration, or just to connect!</p>
-        <div class="text-center">
-          <a href="mailto:sachingupta@example.com" class="btn">Email Me</a>
-        </div>
+        <h2 class="text-3xl font-semibold mb-4">Contact</h2>
+        <p class="text-lg">Email: <a href="mailto:ceofrontlane@gmail.com" class="text-blue-600">ceofrontlane@gmail.com</a></p>
       </section>
 
       <!-- Resume Section -->
-      <section id="resume" class="mb-16">
-        <h2 class="text-3xl font-semibold text-center mb-6">Resume</h2>
-        <div class="text-center">
-          <a href="/path-to-resume.pdf" class="btn">Download Resume</a>
+      <section id="resume" class="mb-20">
+        <h2 class="text-3xl font-semibold mb-4">Resume</h2>
+        <p class="mb-2">Click below to view or download my resume:</p>
+        <iframe src="Sachin%20Gupta_%20Product.pdf" class="w-full h-96 border" title="Sachin Gupta Resume"></iframe>
+        <div class="mt-4">
+          <a href="Sachin%20Gupta_%20Product.pdf" download class="inline-block bg-gray-900 text-white px-6 py-2 rounded hover:bg-gray-700">Download Resume</a>
         </div>
       </section>
-      
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-4 text-center">
-      <p>&copy; 2025 Sachin Gupta. All Rights Reserved.</p>
+    <footer class="bg-black text-white py-6 text-center">
+      &copy; 2025 Sachin Gupta. All rights reserved.
     </footer>
   </body>
 </html>
