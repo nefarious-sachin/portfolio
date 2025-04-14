@@ -11,20 +11,24 @@
       html {
         scroll-behavior: smooth;
       }
-      header.sticky, nav.sticky {
+      header.hero {
         position: sticky;
         top: 0;
         z-index: 50;
-      }
-      .hero {
         background: linear-gradient(145deg, #1a1a1a, #444);
         color: white;
+      }
+      nav.sticky-nav {
+        position: sticky;
+        top: 4.5rem;
+        z-index: 40;
+        background-color: white;
       }
     </style>
   </head>
   <body class="bg-gray-100 text-gray-900 font-sans">
     <!-- Sticky Header -->
-    <header class="hero sticky py-6 px-8 shadow-md">
+    <header class="hero py-6 px-8 shadow-md">
       <div class="max-w-7xl mx-auto flex flex-col items-center">
         <h1 class="text-4xl font-bold">Sachin Gupta</h1>
         <p class="text-lg mt-1">Building financial products for B2B and B2C</p>
@@ -32,7 +36,7 @@
     </header>
 
     <!-- Sticky Navigation -->
-    <nav class="sticky top-16 bg-white shadow-md py-3 px-4 z-40">
+    <nav class="sticky-nav shadow-md py-3 px-4">
       <div class="max-w-4xl mx-auto flex justify-center space-x-6 text-lg">
         <a href="#about" class="text-gray-700 hover:text-black">About</a>
         <a href="#projects" class="text-gray-700 hover:text-black">Projects</a>
@@ -46,7 +50,7 @@
       <section id="about" class="mb-20">
         <h2 class="text-3xl font-semibold mb-4">About Me</h2>
         <p class="text-gray-700 text-lg">
-          Product professional with experience leading digital transformation in banking, integrating eKYC, managing government initiatives, and improving customer onboarding flows.
+          Product professional with experience leading digital transformation in banking, integrating APIs, managing government initiatives,Improving customer onboarding flows and leading SLCs.
         </p>
       </section>
 
@@ -55,19 +59,19 @@
         <h2 class="text-3xl font-semibold mb-6">Projects</h2>
         <div class="space-y-16">
           <div data-aos="fade-up">
-            <img src="https://source.unsplash.com/600x300/?technology,code" alt="UIDAI Project" class="w-full rounded mb-4">
+            <img src="https://picsum.photos/seed/uidai/800/400" alt="UIDAI Project" class="w-full rounded mb-4">
             <h3 class="text-xl font-bold text-gray-800">UIDAI eKYC Integration</h3>
             <p class="text-gray-700">
               Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.
             </p>
             <p class="mt-1 font-medium">Outcome:</p>
             <p class="text-gray-700">
-              Enabled the bank’s first vertical using UIDAI API, saving over ₹12L annually.
+              Enabled the bank’s first vertical using UIDAI API which was saving over ₹12L annually.
             </p>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="100">
-            <img src="https://source.unsplash.com/600x300/?app,ui" alt="LOS Project" class="w-full rounded mb-4">
+            <img src="https://picsum.photos/seed/los/800/400" alt="LOS Project" class="w-full rounded mb-4">
             <h3 class="text-xl font-bold text-gray-800">Decommissioning Legacy LOS</h3>
             <p class="text-gray-700">
               Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. Created data flows, screens, and a new BRE to handle complex loan logic.
@@ -79,7 +83,7 @@
           </div>
 
           <div data-aos="fade-up" data-aos-delay="200">
-            <img src="https://source.unsplash.com/600x300/?government,business" alt="Govt Project" class="w-full rounded mb-4">
+            <img src="https://picsum.photos/seed/government/800/400" alt="Govt Project" class="w-full rounded mb-4">
             <h3 class="text-xl font-bold text-gray-800">Managing Government Business</h3>
             <p class="text-gray-700">
               Led internal systems to support government lending programs like NRLM, NULM, and SHG. Improved PSL tracking and SMF categorization.
@@ -102,10 +106,9 @@
       <!-- Resume Section -->
       <section id="resume" class="mb-20">
         <h2 class="text-3xl font-semibold mb-4">Resume</h2>
-        <p class="mb-2">Click below to view or download my resume:</p>
-        <iframe src="Sachin%20Gupta_%20Product.pdf" class="w-full h-96 border" title="Sachin Gupta Resume"></iframe>
+        <p class="mb-2">Click below to download my resume:</p>
         <div class="mt-4">
-          <a href="Sachin%20Gupta_%20Product.pdf" download class="inline-block bg-gray-900 text-white px-6 py-2 rounded hover:bg-gray-700">Download Resume</a>
+          <a href="/Sachin%20Gupta_%20Product.pdf" download class="inline-block bg-gray-900 text-white px-6 py-2 rounded hover:bg-gray-700">Download Resume</a>
         </div>
       </section>
     </main>
