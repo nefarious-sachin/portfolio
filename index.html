@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sachin Gupta - Product Manager</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <style>
       html {
         scroll-behavior: smooth;
@@ -20,13 +20,14 @@
       }
       nav.sticky-nav {
         position: sticky;
-        top: 4.5rem;
+        top: 6rem; /* Space for profile + header */
         z-index: 40;
         background: linear-gradient(to right, #1a1a1a, #3a3a3a);
       }
       body {
         background: linear-gradient(to bottom, #1a1a1a, #2e2e2e);
         color: white;
+        animation: fadeIn 1s ease-in-out;
       }
       .project-box {
         background: rgba(255, 255, 255, 0.05);
@@ -51,14 +52,23 @@
         max-height: 50px;
         filter: grayscale(100%) brightness(1.2);
       }
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
     </style>
   </head>
   <body class="font-sans">
     <!-- Sticky Header -->
     <header class="hero py-6 px-8 shadow-md">
-      <div class="max-w-7xl mx-auto flex flex-col items-center">
-        <h1 class="text-4xl font-bold">Sachin Gupta</h1>
-        <p class="text-lg mt-1">Building financial products for B2B and B2C</p>
+      <div class="max-w-7xl mx-auto flex justify-between items-center">
+        <div>
+          <h1 class="text-4xl font-bold">Sachin Gupta</h1>
+          <p class="text-lg mt-1">Building financial products for B2B and B2C</p>
+        </div>
+        <div>
+          <img src="profile.png" alt="Sachin Gupta" class="w-16 h-16 rounded-full border-2 border-white shadow-lg" />
+        </div>
       </div>
     </header>
 
@@ -67,108 +77,77 @@
       <div class="max-w-4xl mx-auto flex justify-center space-x-6 text-lg">
         <a href="#about" class="hover:text-blue-400">About</a>
         <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="#affiliations" class="hover:text-blue-400">Affiliations</a>
         <a href="#contact" class="hover:text-blue-400">Contact</a>
         <a href="#resume" class="hover:text-blue-400">Resume</a>
       </div>
     </nav>
 
-    <main class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Main Content -->
+    <main class="max-w-4xl mx-auto px-6 py-12 space-y-20">
       <!-- About Section -->
-      <section id="about" class="mb-20">
-        <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-        <p class="text-lg">
-          Product professional with experience leading digital transformation in Banking, Integrating APIs, Managing government initiatives, Building Business required documents and Improving customer onboarding flows.
+      <section id="about" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4">About</h2>
+        <p>
+          I am a Product Manager with experience in building financial products for both B2B and B2C segments. With a background in Finance and Technology, I specialize in designing scalable systems and seamless user experiences.
         </p>
       </section>
 
       <!-- Projects Section -->
-      <section id="projects" class="mb-20">
-        <h2 class="text-3xl font-semibold mb-10 text-center">Projects</h2>
-        <div class="space-y-16">
-          <div class="project-box" data-aos="fade-up">
-            <h3 class="text-xl font-bold mb-2">UIDAI eKYC Integration</h3>
-            <p>
-              Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.
-            </p>
+      <section id="projects" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-8">Projects</h2>
+        <div class="space-y-6">
+          <div class="project-box">
+            <h3 class="text-xl font-bold">UIDAI eKYC Integration</h3>
+            <p>Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.</p>
             <p class="mt-2 font-semibold">Outcome:</p>
-            <p>
-              Enabled the bank’s first vertical using UIDAI API, saving over ₹12L annually.
-            </p>
+            <p>Enabled the bank’s first vertical using UIDAI API, saving over ₹12L annually.</p>
           </div>
-
-          <div class="project-box" data-aos="fade-up" data-aos-delay="100">
-            <h3 class="text-xl font-bold mb-2">Decommissioning Legacy LOS</h3>
-            <p>
-              Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. Created data flows, screens, and a new BRE to handle complex loan logic.
-            </p>
+          <div class="project-box">
+            <h3 class="text-xl font-bold">Decommissioning Legacy LOS</h3>
+            <p>Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. Created data flows, screens, and a new BRE to handle complex loan logic.</p>
             <p class="mt-2 font-semibold">Outcome:</p>
-            <p>
-              Delivered a flexible, modern lending system—reduced tech debt and enabled faster launches.
-            </p>
+            <p>Delivered a flexible, modern lending system—reduced tech debt and enabled faster launches.</p>
           </div>
-
-          <div class="project-box" data-aos="fade-up" data-aos-delay="200">
-            <h3 class="text-xl font-bold mb-2">Managing Government Business</h3>
-            <p>
-              Led internal systems to support government lending programs like NRLM, NULM, and SHG. Improved PSL tracking and SMF categorization.
-            </p>
+          <div class="project-box">
+            <h3 class="text-xl font-bold">Managing Government Business</h3>
+            <p>Led internal systems to support government lending programs like NRLM, NULM, and SHG. Improved PSL tracking and SMF categorization.</p>
             <p class="mt-2 font-semibold">Outcome:</p>
-            <p>
-              Helped the bank stay compliant with RBI PSL mandates and reduce manual intervention.
-            </p>
-          </div>
-
-          <div class="project-box" data-aos="fade-up" data-aos-delay="300">
-            <h3 class="text-xl font-bold mb-2">Redesigned eKYC Flow for B2B2C Lending App</h3>
-            <p>
-              Improved conversion by streamlining PAN and Aadhaar KYC authentication. Led research, restructured APIs, enabled OCR verification, and implemented custom error handling.
-            </p>
-            <p class="mt-2 font-semibold">Outcome:</p>
-            <p>
-              Reduced drop-offs and enabled B2C customers to complete onboarding in 20 minutes.
-            </p>
+            <p>Helped the bank stay compliant with RBI PSL mandates and reduce manual intervention.</p>
           </div>
         </div>
       </section>
 
-      <!-- Industry Affiliations -->
-      <section id="industry" class="mb-20">
-        <h2 class="text-3xl font-semibold mb-8 text-center">Industry Affiliations</h2>
+      <!-- Affiliations Section -->
+      <section id="affiliations" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-6">Industry Affiliations</h2>
+        <div class="logo-grid mb-10">
+          <img src="motherdairy.png" alt="Mother Dairy" />
+          <img src="hdfc.png" alt="HDFC Bank" />
+          <img src="zomato.png" alt="Zomato" />
+          <img src="indicold.png" alt="Indicold" />
+          <img src="unacademy.png" alt="Unacademy" />
+          <img src="tata.png" alt="Tata Trusts" />
+          <img src="tbl.png" alt="The Big League" />
+        </div>
+        <h2 class="text-3xl font-bold mb-6">Academic Affiliations</h2>
         <div class="logo-grid">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/HDFC_Bank_Logo.svg" alt="HDFC Bank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/f/fb/Tata_Trusts_logo.svg" alt="Tata Trusts">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Unacademy_logo.svg" alt="Unacademy">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/AdmitKard_logo.png" alt="Admitkard">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/7/75/Zomato_logo_2022.svg" alt="Zomato">
-          <img src="https://upload.wikimedia.org/wikipedia/en/b/bf/Mother_Dairy_logo.png" alt="Mother Dairy">
-          <img src="https://indicold.com/wp-content/uploads/2023/01/logo.png" alt="Indicold">
+          <img src="irma.png" alt="IRMA" />
+          <img src="svpuat.png" alt="SVPUAT" />
+          <img src="illinois.png" alt="University of Illinois" />
         </div>
       </section>
 
-      <!-- Academic Affiliations -->
-      <section id="academics" class="mb-20">
-        <h2 class="text-3xl font-semibold mb-8 text-center">Academic Affiliations</h2>
-        <div class="logo-grid">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/IRMA_Logo.png" alt="IRMA">
-          <img src="https://upload.wikimedia.org/wikipedia/en/f/f3/SVPUAT_logo.png" alt="SVPUAT">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/UIUC_Logo.svg" alt="University of Illinois">
-        </div>
+      <!-- Contact -->
+      <section id="contact" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4">Contact</h2>
+        <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/sachin-gupta-4b9a7b104/" class="text-blue-400 underline">LinkedIn</a>.</p>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="mb-20">
-        <h2 class="text-3xl font-semibold mb-4">Contact</h2>
-        <p class="text-lg">Email: <a href="mailto:ceofrontlane@gmail.com" class="text-blue-400 hover:underline">ceofrontlane@gmail.com</a></p>
-        <p class="text-lg mt-2">LinkedIn: <a href="https://www.linkedin.com/in/sachingupta" class="text-blue-400 hover:underline" target="_blank">linkedin.com/in/sachinguptanxt</a></p>
-      </section>
-
-      <!-- Resume Section -->
-      <section id="resume" class="mb-20">
-        <h2 class="text-3xl font-semibold mb-4">Resume</h2>
-        <p class="mb-2">Click below to download my resume:</p>
-        <div class="mt-4">
-          <a href="/Sachin%20Gupta_%20Product.pdf" download class="inline-block bg-white text-black px-6 py-2 rounded hover:bg-gray-300 font-semibold">Download Resume</a>
-        </div>
+      <!-- Resume -->
+      <section id="resume" data-aos="fade-up">
+        <h2 class="text-3xl font-bold mb-4">Resume</h2>
+        <a href="Sachin Gupta_ Product.pdf" download class="text-blue-400 underline">Download Resume</a>
       </section>
     </main>
 
