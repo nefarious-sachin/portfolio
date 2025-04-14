@@ -15,18 +15,34 @@
         position: sticky;
         top: 0;
         z-index: 50;
-        background: linear-gradient(145deg, #1a1a1a, #444);
+        background: linear-gradient(to right, #1a1a1a, #3a3a3a);
         color: white;
       }
       nav.sticky-nav {
         position: sticky;
         top: 4.5rem;
         z-index: 40;
-        background-color: white;
+        background: linear-gradient(to right, #1a1a1a, #3a3a3a);
+      }
+      body {
+        background: linear-gradient(to bottom, #1a1a1a, #2e2e2e);
+        color: white;
+      }
+      .project-box {
+        background: rgba(255, 255, 255, 0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 1rem;
+        padding: 2rem;
+        transition: transform 0.3s ease;
+      }
+      .project-box:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
-  <body class="bg-gray-100 text-gray-900 font-sans">
+  <body class="font-sans">
     <!-- Sticky Header -->
     <header class="hero py-6 px-8 shadow-md">
       <div class="max-w-7xl mx-auto flex flex-col items-center">
@@ -36,12 +52,12 @@
     </header>
 
     <!-- Sticky Navigation -->
-    <nav class="sticky-nav shadow-md py-3 px-4">
+    <nav class="sticky-nav shadow-md py-3 px-4 text-white">
       <div class="max-w-4xl mx-auto flex justify-center space-x-6 text-lg">
-        <a href="#about" class="text-gray-700 hover:text-black">About</a>
-        <a href="#projects" class="text-gray-700 hover:text-black">Projects</a>
-        <a href="#contact" class="text-gray-700 hover:text-black">Contact</a>
-        <a href="#resume" class="text-gray-700 hover:text-black">Resume</a>
+        <a href="#about" class="hover:text-blue-400">About</a>
+        <a href="#projects" class="hover:text-blue-400">Projects</a>
+        <a href="#contact" class="hover:text-blue-400">Contact</a>
+        <a href="#resume" class="hover:text-blue-400">Resume</a>
       </div>
     </nav>
 
@@ -49,47 +65,44 @@
       <!-- About Section -->
       <section id="about" class="mb-20">
         <h2 class="text-3xl font-semibold mb-4">About Me</h2>
-        <p class="text-gray-700 text-lg">
-          Product professional with experience leading digital transformation in banking, integrating APIs, managing government initiatives,Improving customer onboarding flows and leading SLCs.
+        <p class="text-lg">
+          Product professional with experience leading digital transformation in banking, integrating eKYC, managing government initiatives, and improving customer onboarding flows.
         </p>
       </section>
 
       <!-- Projects Section -->
       <section id="projects" class="mb-20">
-        <h2 class="text-3xl font-semibold mb-6">Projects</h2>
+        <h2 class="text-3xl font-semibold mb-10 text-center">Projects</h2>
         <div class="space-y-16">
-          <div data-aos="fade-up">
-            <img src="https://picsum.photos/seed/uidai/800/400" alt="UIDAI Project" class="w-full rounded mb-4">
-            <h3 class="text-xl font-bold text-gray-800">UIDAI eKYC Integration</h3>
-            <p class="text-gray-700">
+          <div class="project-box" data-aos="fade-up">
+            <h3 class="text-xl font-bold mb-2">UIDAI eKYC Integration</h3>
+            <p>
               Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.
             </p>
-            <p class="mt-1 font-medium">Outcome:</p>
-            <p class="text-gray-700">
-              Enabled the bank’s first vertical using UIDAI API which was saving over ₹12L annually.
+            <p class="mt-2 font-semibold">Outcome:</p>
+            <p>
+              Enabled the bank’s first vertical using UIDAI API, saving over ₹12L annually.
             </p>
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="100">
-            <img src="https://picsum.photos/seed/los/800/400" alt="LOS Project" class="w-full rounded mb-4">
-            <h3 class="text-xl font-bold text-gray-800">Decommissioning Legacy LOS</h3>
-            <p class="text-gray-700">
+          <div class="project-box" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="text-xl font-bold mb-2">Decommissioning Legacy LOS</h3>
+            <p>
               Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. Created data flows, screens, and a new BRE to handle complex loan logic.
             </p>
-            <p class="mt-1 font-medium">Outcome:</p>
-            <p class="text-gray-700">
+            <p class="mt-2 font-semibold">Outcome:</p>
+            <p>
               Delivered a flexible, modern lending system—reduced tech debt and enabled faster launches.
             </p>
           </div>
 
-          <div data-aos="fade-up" data-aos-delay="200">
-            <img src="https://picsum.photos/seed/government/800/400" alt="Govt Project" class="w-full rounded mb-4">
-            <h3 class="text-xl font-bold text-gray-800">Managing Government Business</h3>
-            <p class="text-gray-700">
+          <div class="project-box" data-aos="fade-up" data-aos-delay="200">
+            <h3 class="text-xl font-bold mb-2">Managing Government Business</h3>
+            <p>
               Led internal systems to support government lending programs like NRLM, NULM, and SHG. Improved PSL tracking and SMF categorization.
             </p>
-            <p class="mt-1 font-medium">Outcome:</p>
-            <p class="text-gray-700">
+            <p class="mt-2 font-semibold">Outcome:</p>
+            <p>
               Helped the bank stay compliant with RBI PSL mandates and reduce manual intervention.
             </p>
           </div>
@@ -99,8 +112,8 @@
       <!-- Contact Section -->
       <section id="contact" class="mb-20">
         <h2 class="text-3xl font-semibold mb-4">Contact</h2>
-        <p class="text-lg">Email: <a href="mailto:ceofrontlane@gmail.com" class="text-blue-600">ceofrontlane@gmail.com</a></p>
-        <p class="text-lg mt-2">LinkedIn: <a href="https://www.linkedin.com/in/sachingupta" class="text-blue-600" target="_blank">linkedin.com/in/sachinguptanxt</a></p>
+        <p class="text-lg">Email: <a href="mailto:ceofrontlane@gmail.com" class="text-blue-400 hover:underline">ceofrontlane@gmail.com</a></p>
+        <p class="text-lg mt-2">LinkedIn: <a href="https://www.linkedin.com/in/sachingupta" class="text-blue-400 hover:underline" target="_blank">linkedin.com/in/sachingupta</a></p>
       </section>
 
       <!-- Resume Section -->
@@ -108,7 +121,7 @@
         <h2 class="text-3xl font-semibold mb-4">Resume</h2>
         <p class="mb-2">Click below to download my resume:</p>
         <div class="mt-4">
-          <a href="/Sachin%20Gupta_%20Product.pdf" download class="inline-block bg-gray-900 text-white px-6 py-2 rounded hover:bg-gray-700">Download Resume</a>
+          <a href="/Sachin%20Gupta_%20Product.pdf" download class="inline-block bg-white text-black px-6 py-2 rounded hover:bg-gray-300 font-semibold">Download Resume</a>
         </div>
       </section>
     </main>
@@ -118,7 +131,12 @@
     </footer>
 
     <script>
-      AOS.init();
+      AOS.init({
+        duration: 1000,
+        easing: 'ease-in-out',
+        once: true,
+        mirror: false
+      });
     </script>
   </body>
 </html>
