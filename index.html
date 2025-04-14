@@ -1,117 +1,48 @@
-// Personal PM Portfolio Site - React + Tailwind (Light Theme)
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sachin Gupta - Product Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.1.2/dist/tailwind.min.css" rel="stylesheet">
+  </head>
+  <body class="bg-white text-gray-900">
+    <header class="py-8 px-4">
+      <h1 class="text-4xl font-bold text-center">Sachin Gupta</h1>
+      <p class="text-xl text-center mt-2">Building financial products for B2B and B2C</p>
+    </header>
+    
+    <main class="container mx-auto px-4">
+      <nav class="flex justify-center space-x-6 mt-6">
+        <a href="#about" class="text-xl">About</a>
+        <a href="#projects" class="text-xl">Projects</a>
+        <a href="#contact" class="text-xl">Contact</a>
+        <a href="#resume" class="text-xl">Resume</a>
+      </nav>
 
-import React from "react";
+      <section id="about" class="mt-16">
+        <h2 class="text-2xl font-semibold">About</h2>
+        <p class="mt-2">This is where you'll talk about your background, experience, and what makes you a great product manager.</p>
+      </section>
 
-export default function Portfolio() {
-  return (
-    <div className="bg-white text-gray-900 min-h-screen font-sans scroll-smooth">
-      <header className="p-6 border-b border-gray-200 sticky top-0 bg-white z-10">
-        <nav className="flex justify-between items-center">
-          <div>
-            <h1 className="text-3xl font-bold">Sachin Gupta</h1>
-            <p className="text-sm text-gray-600">
-              Building financial products for B2B and B2C
-            </p>
-          </div>
-          <ul className="flex space-x-4 text-sm">
-            <li><a href="#about" className="hover:underline">About</a></li>
-            <li><a href="#projects" className="hover:underline">Projects</a></li>
-            <li><a href="#contact" className="hover:underline">Contact</a></li>
-            <li><a href="/Sachin_Gupta_Product.pdf" download className="hover:underline">Resume</a></li>
-          </ul>
-        </nav>
-      </header>
+      <section id="projects" class="mt-16">
+        <h2 class="text-2xl font-semibold">Projects</h2>
+        <p class="mt-2">Showcase your major projects here with descriptions and links to relevant work.</p>
+      </section>
 
-      <main className="max-w-4xl mx-auto p-6 space-y-12">
-        {/* About Me Section */}
-        <section id="about">
-          <h2 className="text-2xl font-semibold mb-2">About Me</h2>
-          <p>
-            I’m an unconventional Product Manager building financial products
-            across both B2B and B2C segments. An accidental banker by choice, I
-            hold an Engineering degree and an MBA in Finance. Currently, I work
-            as a Product Manager at India’s largest private bank, where I focus
-            on building scalable digital platforms, enhancing user experiences,
-            and modernizing legacy systems.
-          </p>
-          <p className="mt-2">
-            I’ve led multiple high-impact initiatives—most notably, the
-            integration of UIDAI’s eKYC API for seamless borrower
-            authentication. My work lies at the intersection of tech, design,
-            and compliance, and I thrive on solving complex problems with
-            simple, elegant solutions.
-          </p>
-        </section>
+      <section id="contact" class="mt-16">
+        <h2 class="text-2xl font-semibold">Contact</h2>
+        <p class="mt-2">Add your contact details or a contact form here.</p>
+      </section>
 
-        {/* Projects Section */}
-        <section id="projects">
-          <h2 className="text-2xl font-semibold mb-4">Projects</h2>
-
-          <div className="space-y-6">
-            {/* Project 1 */}
-            <div>
-              <h3 className="text-xl font-bold">UIDAI eKYC Integration</h3>
-              <p>
-                Integrated UIDAI’s eKYC API into the bank’s onboarding flow for
-                real-time borrower authentication. Led API design, built secure
-                ADV storage, and overcame regulatory and data mapping
-                challenges.
-              </p>
-              <p className="mt-1 font-medium">Outcome:</p>
-              <p>
-                Enabled the bank’s first vertical using UIDAI API, saving over ₹12L
-                annually.
-              </p>
-            </div>
-
-            {/* Project 2 */}
-            <div>
-              <h3 className="text-xl font-bold">Decommissioning Legacy LOS</h3>
-              <p>
-                Spearheaded the redesign of a rigid LOS into a modular platform
-                integrated with LMS, Collection, and API systems. Created data
-                flows, screens, and a new BRE to handle complex loan logic.
-              </p>
-              <p className="mt-1 font-medium">Outcome:</p>
-              <p>
-                Delivered a flexible, modern lending system—reduced tech debt and
-                enabled faster launches.
-              </p>
-            </div>
-
-            {/* Project 3 */}
-            <div>
-              <h3 className="text-xl font-bold">Managing Government Business</h3>
-              <p>
-                Led internal systems to support government lending programs like
-                NRLM, NULM, and SHG. Improved PSL tracking and SMF
-                categorization.
-              </p>
-              <p className="mt-1 font-medium">Outcome:</p>
-              <p>
-                Helped the bank stay compliant with RBI PSL mandates and reduce
-                manual intervention.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Resume + Contact */}
-        <section id="contact">
-          <h2 className="text-2xl font-semibold mb-2">Get in Touch</h2>
-          <p>
-            Interested in working together or want to know more? Reach out via:
-          </p>
-          <ul className="list-disc list-inside mt-2">
-            <li>Email: ceofrontlane@gmail.com</li>
-            <li>LinkedIn: https://linkedin.com/in/sachin-gupta</li>
-          </ul>
-        </section>
-      </main>
-
-      <footer className="text-center text-xs text-gray-500 p-4 border-t border-gray-200">
-        © {new Date().getFullYear()} Sachin Gupta. All rights reserved.
-      </footer>
-    </div>
-  );
-}
+      <section id="resume" class="mt-16">
+        <h2 class="text-2xl font-semibold">Resume</h2>
+        <p class="mt-2">Include a link to your resume or an embedded version here.</p>
+      </section>
+    </main>
+    
+    <footer class="bg-gray-800 text-white text-center py-4 mt-16">
+      <p>&copy; Sachin Gupta. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>
