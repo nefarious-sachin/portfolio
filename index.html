@@ -7,25 +7,37 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-      /* Default link color for dark theme */
-      nav.sticky-nav a {
-        color: rgba(255, 255, 255, 0.8); /* Slightly dimmed white color */
+      /* Apply Poppins font */
+      body {
+        font-family: 'Poppins', sans-serif;
       }
 
-      /* Hover effect to be subtle on dark background */
-      nav.sticky-nav a:hover {
-        color: rgba(255, 255, 255, 1); /* Full white on hover */
+      /* Update for text color */
+      body.dark {
+        color: #e5e5e5; /* Light text color for dark mode */
       }
 
-      /* Default link color for mobile menu */
-      #mobile-menu a {
-        color: rgba(255, 255, 255, 0.8); /* Slightly dimmed white color */
+      /* Ensure the links are easily visible in dark mode */
+      a, nav.sticky-nav a {
+        color: rgba(255, 255, 255, 0.8); /* Slightly dimmed white for links */
       }
 
-      /* Hover effect for mobile menu */
-      #mobile-menu a:hover {
-        color: rgba(255, 255, 255, 1); /* Full white on hover */
+      /* On hover, make the text fully white */
+      a:hover, nav.sticky-nav a:hover {
+        color: rgba(255, 255, 255, 1);
+      }
+
+      /* Sticky header styling */
+      header {
+        background-color: #1f2937; /* Dark gray header */
+      }
+
+      /* Remove blue color from hamburger */
+      #hamburger {
+        color: white;
       }
     </style>
   </head>
@@ -34,8 +46,8 @@
     <header class="hero py-6 px-8 shadow-md">
       <div class="max-w-7xl mx-auto flex justify-between items-center">
         <div>
-          <h1 class="text-4xl font-bold">Sachin Gupta</h1>
-          <p class="text-lg mt-1">Building financial products for B2B and B2C</p>
+          <h1 class="text-4xl font-bold text-white">Sachin Gupta</h1>
+          <p class="text-lg mt-1 text-white">Building financial products for B2B and B2C</p>
         </div>
         <div>
           <img src="profile.jpeg" alt="Sachin Gupta" class="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover" />
@@ -139,6 +151,7 @@
     <script>
       AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
 
+      // Theme toggle functionality
       const themeToggleButton = document.getElementById("theme-toggle");
       const currentTheme = localStorage.getItem("theme") || "dark";
       document.body.classList.add(currentTheme);
@@ -156,4 +169,11 @@
       });
 
       const hamburgerButton = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburgerButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
