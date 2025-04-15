@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>Sachin Gupta - Product Manager</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -12,133 +12,67 @@
     <style>
       body {
         font-family: 'Poppins', sans-serif;
-        background-color: #1c1c1c; /* Dark background for Apple-like feel */
-        color: #e5e5e5; /* Light text */
-        margin: 0;
-        padding: 0;
         transition: background-color 0.3s, color 0.3s;
       }
 
-      .gradient-bg {
-        background: linear-gradient(135deg, #2e2e2e, #1a1a1a); /* Dark gray gradient */
+      body.dark {
+        background-color: #111827; /* Proper dark background */
+        color: #e5e5e5;             /* Light text for dark mode */
+      }
+
+      body.light {
+        background-color: #ffffff; /* Light background */
+        color: #111827;             /* Dark text for light mode */
       }
 
       nav.sticky-nav a {
-        color: #e5e5e5;
-        transition: color 0.3s ease;
+        transition: color 0.3s;
       }
 
       nav.sticky-nav a:hover {
-        color: #ffffff; /* Hover effect for navigation */
-      }
-
-      /* Sticky Hamburger Section */
-      .sticky-nav {
-        position: sticky;
-        top: 10%;
-        left: 20px;
-        width: 200px;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        transition: transform 0.3s ease, font-size 0.3s ease;
-        z-index: 1000;
-      }
-
-      .sticky-nav a {
-        font-size: 1rem;
-        padding: 12px 0;
-        text-decoration: none;
-      }
-
-      .sticky-nav a.active {
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
-
-      .sticky-nav a:hover {
-        font-size: 1.2rem;
-      }
-
-      .sticky-nav a.active:hover {
-        font-size: 1.35rem;
+        color: #ffffff;
       }
 
       header {
-        background-color: #111827;
-        padding: 20px;
+        background-color: #1f2937;
+      }
+
+      #hamburger {
         color: white;
       }
 
-      header h1 {
-        font-size: 2.5rem;
-        font-weight: bold;
+      /* Resize affiliation logos */
+      .logo-grid img {
+        height: 60px;
+        object-fit: contain;
+        margin: 0.5rem;
       }
 
-      .hero img {
-        border-radius: 50%;
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+      .logo-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
       }
 
-      .project-card {
-        background-color: #333;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      /* Hover effect for project cards */
+      .project-box {
+        transition: transform 0.3s, box-shadow 0.3s;
       }
 
-      .project-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-      }
-
-      /* Hover Effects for Project Cards */
-      .project-card .content h3 {
-        font-size: 1.25rem;
-        font-weight: 600;
-      }
-
-      .project-card .content p {
-        margin-top: 8px;
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      /* Sticky about section style */
-      #about {
-        position: sticky;
-        top: 20px;
-        font-size: 1rem; /* Initial smaller font */
-        transition: font-size 0.3s ease, transform 0.3s ease;
-      }
-
-      #about:hover {
-        font-size: 1.25rem; /* Increase font size on hover */
-        transform: scale(1.05);
-        opacity: 1;
-      }
-
-      footer {
-        background-color: #111827;
-        padding: 20px;
-        text-align: center;
-        color: white;
-      }
-
-      footer a {
-        text-decoration: underline;
-        color: #bbb;
+      .project-box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
-  <body>
+  <body class="dark font-sans">
     <!-- HEADER -->
-    <header class="hero">
+    <header class="hero py-6 px-8 shadow-md">
       <div class="max-w-7xl mx-auto flex justify-between items-center">
         <div>
-          <h1>Sachin Gupta</h1>
-          <p>Building financial products for B2B and B2C</p>
+          <h1 class="text-4xl font-bold text-white">Sachin Gupta</h1>
+          <p class="text-lg mt-1 text-white">Building financial products for B2B and B2C</p>
         </div>
         <div>
           <img src="profile.jpeg" alt="Sachin Gupta" class="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover"/>
@@ -146,87 +80,105 @@
       </div>
     </header>
 
-    <!-- STICKY NAVIGATION -->
-    <nav class="sticky-nav">
-      <a href="#about" id="link-about">About</a>
-      <a href="#projects" id="link-projects">Projects</a>
-      <a href="#affiliations" id="link-affiliations">Affiliations</a>
-      <a href="#contact" id="link-contact">Contact</a>
-      <a href="#resume" id="link-resume">Resume</a>
+    <!-- NAVIGATION -->
+    <nav class="sticky-nav shadow-md py-3 px-4 text-white relative">
+      <div class="max-w-4xl mx-auto flex justify-between items-center relative">
+        <div class="lg:hidden">
+          <button id="hamburger" class="text-white text-2xl">&#9776;</button>
+        </div>
+        <div id="mobile-menu" class="lg:flex hidden flex-col lg:flex-row lg:space-x-6 space-y-4 text-lg bg-gradient-to-r from-gray-900 to-gray-800/95 backdrop-blur-sm lg:bg-transparent p-6 rounded-b-xl absolute top-full left-0 w-full lg:static z-40 text-white shadow-lg">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#affiliations">Affiliations</a>
+          <a href="#contact">Contact</a>
+          <a href="#resume">Resume</a>
+        </div>
+      </div>
     </nav>
 
-    <!-- MAIN CONTENT -->
+    <!-- MAIN -->
     <main class="max-w-4xl mx-auto px-6 py-12 space-y-20">
-      <section id="about" class="gradient-bg">
+      <section id="about" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-4">About</h2>
         <p>I am a Product Manager with experience in building financial products for both B2B and B2C segments. With a background in Finance and Technology, I specialize in designing scalable systems and seamless user experiences.</p>
       </section>
 
-      <section id="projects">
+      <section id="projects" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-8">Projects</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Project Cards -->
-          <div class="project-card">
-            <div class="content">
-              <h3>UIDAI eKYC Integration</h3>
-              <p>Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.</p>
-              <p>Outcome: Enabled the bank’s first vertical using UIDAI API, saving over ₹12L annually.</p>
-            </div>
+        <div class="space-y-6">
+          <!-- Each Project Box -->
+          <div class="project-box p-6 border rounded-lg shadow-md hover:shadow-xl">
+            <h3 class="text-xl font-bold">UIDAI eKYC Integration</h3>
+            <p>Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.</p>
+            <p class="mt-2 font-semibold">Outcome:</p>
+            <p>Enabled the bank’s first vertical using UIDAI API, saving over ₹12L annually.</p>
           </div>
-          <!-- More project cards can be added here -->
+          <div class="project-box p-6 border rounded-lg shadow-md hover:shadow-xl">
+            <h3 class="text-xl font-bold">Decommissioning Legacy LOS</h3>
+            <p>Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. Created data flows, screens, and a new BRE to handle complex loan logic.</p>
+            <p class="mt-2 font-semibold">Outcome:</p>
+            <p>Delivered a flexible, modern lending system—reduced tech debt and enabled faster launches.</p>
+          </div>
+          <div class="project-box p-6 border rounded-lg shadow-md hover:shadow-xl">
+            <h3 class="text-xl font-bold">Managing Government Business</h3>
+            <p>Led internal systems to support government lending programs like NRLM, NULM, and SHG. Improved PSL tracking and SMF categorization.</p>
+            <p class="mt-2 font-semibold">Outcome:</p>
+            <p>Helped the bank stay compliant with RBI PSL mandates and reduce manual intervention.</p>
+          </div>
+          <div class="project-box p-6 border rounded-lg shadow-md hover:shadow-xl">
+            <h3 class="text-xl font-bold">Product Strategy at AIC-IL</h3>
+            <p>Developed a product strategy for a cold-chain agri supply chain startup. Conducted market research, built customer personas, and refined business and revenue models to align with rural supply chain needs.</p>
+            <p class="mt-2 font-semibold">Outcome:</p>
+            <p>Enabled fundraising and product-market fit in the institutional buyer segment.</p>
+          </div>
         </div>
       </section>
 
-      <section id="affiliations">
+      <section id="affiliations" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-6">Industry Affiliations</h2>
         <div class="logo-grid mb-10">
           <img src="logo-mother-dairy.webp" alt="Mother Dairy" />
           <img src="logo-hdfc-bank.jpeg" alt="HDFC Bank" />
           <img src="logo-zomato.png" alt="Zomato" />
+          <img src="logo-indicold.png" alt="Indicold" />
+          <img src="logo-unacademy.png" alt="Unacademy" />
+          <img src="logo-tata-trusts.png" alt="Tata Trusts" />
+          <img src="logo-big-league.png" alt="The Big League" />
+        </div>
+
+        <h2 class="text-3xl font-bold mb-6">Academic Affiliations</h2>
+        <div class="logo-grid">
+          <img src="irma.png" alt="IRMA" />
+          <img src="logo-svpuat.jpeg" alt="SVPUAT" />
+          <img src="logo-university-illinois.png" alt="University of Illinois" />
         </div>
       </section>
 
-      <section id="contact">
+      <section id="contact" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-4">Contact</h2>
         <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/sachinguptanxt/" class="underline">LinkedIn</a>.</p>
       </section>
 
-      <section id="resume">
+      <section id="resume" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-4">Resume</h2>
         <a href="Sachin Gupta_ Product.pdf" download class="underline">Download Resume</a>
       </section>
     </main>
 
     <!-- FOOTER -->
-    <footer>
-      <p>&copy; 2025 Sachin Gupta. All rights reserved.</p>
+    <footer class="bg-black text-white py-6 text-center">
+      &copy; 2025 Sachin Gupta. All rights reserved.
     </footer>
 
+    <!-- JS for Menu -->
     <script>
       AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
 
-      // Change navigation item font size based on scrolling
-      const sections = ['#about', '#projects', '#affiliations', '#contact', '#resume'];
-      const links = {
-        '#about': 'link-about',
-        '#projects': 'link-projects',
-        '#affiliations': 'link-affiliations',
-        '#contact': 'link-contact',
-        '#resume': 'link-resume'
-      };
+      const hamburgerButton = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-      window.addEventListener('scroll', () => {
-        sections.forEach((section) => {
-          const el = document.querySelector(section);
-          const link = document.getElementById(links[section]);
-          
-          const rect = el.getBoundingClientRect();
-          if (rect.top >= 0 && rect.top <= window.innerHeight / 2) {
-            link.classList.add('active');
-          } else {
-            link.classList.remove('active');
-          }
-        });
+      hamburgerButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
       });
     </script>
   </body>
