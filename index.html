@@ -76,12 +76,12 @@
     </header>
 
     <!-- Sticky Navigation -->
-    <nav class="sticky-nav shadow-md py-3 px-4 text-white">
-      <div class="max-w-4xl mx-auto flex justify-between items-center">
+    <nav class="sticky-nav shadow-md py-3 px-4 text-white relative">
+  <div class="max-w-4xl mx-auto flex justify-between items-center relative">
         <div class="lg:hidden">
           <button id="hamburger" class="text-white text-2xl">&#9776;</button>
         </div>
-        <div id="mobile-menu" class="lg:flex hidden space-x-6 text-lg">
+        <div id="mobile-menu" class="lg:flex hidden flex-col lg:flex-row lg:space-x-6 space-y-4 text-lg bg-gray-800 lg:bg-transparent p-4 rounded-md absolute top-full left-0 w-full lg:static z-40">
           <a href="#about" class="hover:text-blue-400">About</a>
           <a href="#projects" class="hover:text-blue-400">Projects</a>
           <a href="#affiliations" class="hover:text-blue-400">Affiliations</a>
