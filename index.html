@@ -8,27 +8,26 @@
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <style>
-  /* Default link color for dark theme */
-  nav.sticky-nav a {
-    color: rgba(255, 255, 255, 0.8); /* Slightly dimmed white color */
-  }
+      /* Default link color for dark theme */
+      nav.sticky-nav a {
+        color: rgba(255, 255, 255, 0.8); /* Slightly dimmed white color */
+      }
 
-  /* Hover effect to be subtle on dark background */
-  nav.sticky-nav a:hover {
-    color: rgba(255, 255, 255, 1); /* Full white on hover */
-  }
+      /* Hover effect to be subtle on dark background */
+      nav.sticky-nav a:hover {
+        color: rgba(255, 255, 255, 1); /* Full white on hover */
+      }
 
-  /* Default link color for mobile menu */
-  #mobile-menu a {
-    color: rgba(255, 255, 255, 0.8); /* Slightly dimmed white color */
-  }
+      /* Default link color for mobile menu */
+      #mobile-menu a {
+        color: rgba(255, 255, 255, 0.8); /* Slightly dimmed white color */
+      }
 
-  /* Hover effect for mobile menu */
-  #mobile-menu a:hover {
-    color: rgba(255, 255, 255, 1); /* Full white on hover */
-  }
-</style>
-
+      /* Hover effect for mobile menu */
+      #mobile-menu a:hover {
+        color: rgba(255, 255, 255, 1); /* Full white on hover */
+      }
+    </style>
   </head>
   <body class="dark font-sans">
     <!-- Sticky Header -->
@@ -46,26 +45,21 @@
 
     <!-- Sticky Navigation -->
     <nav class="sticky-nav shadow-md py-3 px-4 text-white relative">
-  <div class="max-w-4xl mx-auto flex justify-between items-center relative">
+      <div class="max-w-4xl mx-auto flex justify-between items-center relative">
         <div class="lg:hidden">
           <button id="hamburger" class="text-white text-2xl">&#9776;</button>
         </div>
-<div id="mobile-menu" class="lg:flex hidden flex-col lg:flex-row lg:space-x-6 space-y-4 text-lg bg-gradient-to-r from-gray-900 to-gray-800/95 backdrop-blur-sm lg:bg-transparent p-6 rounded-b-xl absolute top-full left-0 w-full lg:static z-40 text-white shadow-lg">
-          <a href="#about" class="hover:text-blue-400 transition-colors duration-200 ease-in-out">About</a>
-<a href="#projects" class="hover:text-blue-400 transition-colors duration-200 ease-in-out">Projects</a>
-<a href="#affiliations" class="hover:text-blue-400 transition-colors duration-200 ease-in-out">Affiliations</a>
-<a href="#contact" class="hover:text-blue-400 transition-colors duration-200 ease-in-out">Contact</a>
-<a href="#resume" class="hover:text-blue-400 transition-colors duration-200 ease-in-out">Resume</a>
-
+        <div id="mobile-menu" class="lg:flex hidden flex-col lg:flex-row lg:space-x-6 space-y-4 text-lg bg-gradient-to-r from-gray-900 to-gray-800/95 backdrop-blur-sm lg:bg-transparent p-6 rounded-b-xl absolute top-full left-0 w-full lg:static z-40 text-white shadow-lg">
+          <a href="#about" class="hover:text-white transition-colors duration-200 ease-in-out">About</a>
+          <a href="#projects" class="hover:text-white transition-colors duration-200 ease-in-out">Projects</a>
+          <a href="#affiliations" class="hover:text-white transition-colors duration-200 ease-in-out">Affiliations</a>
+          <a href="#contact" class="hover:text-white transition-colors duration-200 ease-in-out">Contact</a>
+          <a href="#resume" class="hover:text-white transition-colors duration-200 ease-in-out">Resume</a>
         </div>
         <button id="theme-toggle" class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition flex items-center">
-  <span id="theme-icon" class="material-icons">dark_mode</span>
-  <span class="ml-2">Toggle Theme</span>
-</button>
-
-
-<script src="https://cdn.jsdelivr.net/npm/@material-icons/font/css/material-icons.css"></script>
-
+          <span id="theme-icon" class="material-icons">dark_mode</span>
+          <span class="ml-2">Toggle Theme</span>
+        </button>
       </div>
     </nav>
 
@@ -129,12 +123,12 @@
 
       <section id="contact" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-4">Contact</h2>
-        <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/sachinguptanxt/" class="text-blue-400 underline">LinkedIn</a>.</p>
+        <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/sachinguptanxt/" class="text-white underline">LinkedIn</a>.</p>
       </section>
 
       <section id="resume" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-4">Resume</h2>
-        <a href="Sachin Gupta_ Product.pdf" download class="text-blue-400 underline">Download Resume</a>
+        <a href="Sachin Gupta_ Product.pdf" download class="text-white underline">Download Resume</a>
       </section>
     </main>
 
@@ -162,11 +156,4 @@
       });
 
       const hamburgerButton = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      hamburgerButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-    </script>
-  </body>
-</html>
+      const mobileMenu = document.getElementById
