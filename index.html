@@ -2,197 +2,111 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Sachin Gupta - Unconventional Product Manager</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sachin Gupta - Product Manager</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
     <style>
       body {
-        font-family: 'Poppins', sans-serif;
-        transition: background-color 0.3s, color 0.3s;
+        font-family: 'Inter', sans-serif;
       }
-
-      body.dark {
-        background-color: #111827; /* Proper dark background */
-        color: #e5e5e5;             /* Light text for dark mode */
+      .project-box {
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 1.5rem;
+        border-radius: 1rem;
+        transition: all 0.3s ease;
       }
-
-      body.light {
-        background-color: #ffffff; /* Light background */
-        color: #111827;             /* Dark text for light mode */
+      .project-box:hover {
+        transform: translateY(-5px);
+        background: rgba(255, 255, 255, 0.1);
       }
-
-      nav.sticky-nav a {
-        transition: color 0.3s;
-      }
-
-      nav.sticky-nav a:hover {
-        color: #ffffff;
-      }
-
-      header {
-        background-color: #1f2937;
-      }
-
-      #hamburger {
-        color: white;
-      }
-
-      /* Resize affiliation logos */
-      .logo-grid img {
-        height: 60px;
-        object-fit: contain;
-        margin: 0.5rem;
-      }
-
       .logo-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
         align-items: center;
+      }
+      .logo-grid img {
+        max-height: 60px;
+        object-fit: contain;
+        margin: auto;
       }
     </style>
   </head>
-  <body class="dark font-sans">
-    <!-- HEADER -->
-    <header class="hero py-6 px-8 shadow-md">
-      <div class="max-w-7xl mx-auto flex justify-between items-center">
-        <div>
-          <h1 class="text-4xl font-bold text-white">Sachin Gupta</h1>
-          <p class="text-lg mt-1 text-white">Building financial products for B2B and B2C</p>
+  <body class="bg-black text-white">
+    <!-- Hero Section -->
+    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+      <h1 class="text-5xl font-bold mb-4">Hi, I'm Sachin Gupta</h1>
+      <p class="text-xl mb-6 max-w-2xl">Product Manager building scalable B2B/B2C financial solutions. Obsessed with design, systems, and outcomes.</p>
+      <div class="space-x-4">
+        <a href="#projects" class="px-6 py-2 border rounded-full hover:bg-white hover:text-black transition">View Projects</a>
+        <a href="Sachin Gupta_ Product.pdf" class="px-6 py-2 border rounded-full hover:bg-white hover:text-black transition">Download Resume</a>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="max-w-5xl mx-auto px-6 py-20" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-12 text-center">Projects</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="project-box">
+          <h3 class="text-2xl font-semibold mb-2">UIDAI eKYC Integration</h3>
+          <p>Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication.</p>
+          <p class="mt-2 text-sm text-gray-400">Outcome: Saved ₹12L annually with real-time verification.</p>
         </div>
-        <div>
-          <img src="profile.jpeg" alt="Sachin Gupta" class="w-16 h-16 rounded-full border-2 border-white shadow-lg object-cover"/>
+        <div class="project-box">
+          <h3 class="text-2xl font-semibold mb-2">Decommissioning Legacy LOS</h3>
+          <p>Redesigned a legacy system into a modular platform integrated with LMS and other systems.</p>
+          <p class="mt-2 text-sm text-gray-400">Outcome: Reduced tech debt, faster feature rollout.</p>
+        </div>
+        <div class="project-box">
+          <h3 class="text-2xl font-semibold mb-2">Managing Government Business</h3>
+          <p>Improved PSL tracking and SMF categorization for lending under government schemes.</p>
+          <p class="mt-2 text-sm text-gray-400">Outcome: Increased compliance and reduced manual work.</p>
+        </div>
+        <div class="project-box">
+          <h3 class="text-2xl font-semibold mb-2">Product Strategy at AIC-IL</h3>
+          <p>Developed strategy for a cold-chain agri supply startup, refining product-market fit and fundraising.</p>
+          <p class="mt-2 text-sm text-gray-400">Outcome: Enabled institutional traction and funding.</p>
         </div>
       </div>
-    </header>
+    </section>
 
-    <!-- NAVIGATION -->
-    <nav class="sticky-nav shadow-md py-3 px-4 text-white relative">
-      <div class="max-w-4xl mx-auto flex justify-between items-center relative">
-        <div class="lg:hidden">
-          <button id="hamburger" class="text-white text-2xl">&#9776;</button>
-        </div>
-        <div id="mobile-menu" class="lg:flex hidden flex-col lg:flex-row lg:space-x-6 space-y-4 text-lg bg-gradient-to-r from-gray-900 to-gray-800/95 backdrop-blur-sm lg:bg-transparent p-6 rounded-b-xl absolute top-full left-0 w-full lg:static z-40 text-white shadow-lg">
-          <a href="#about">About</a>
-          <a href="#projects">Projects</a>
-          <a href="#affiliations">Affiliations</a>
-          <a href="#contact">Contact</a>
-          <a href="#resume">Resume</a>
-        </div>
-        <button id="theme-toggle" class="bg-gray-800 text-white px-4 py-2 rounded-full hover:bg-gray-700 transition flex items-center">
-          <span id="theme-icon" class="material-icons"></span>
-          <span class="ml-2">Toggle Theme</span>
-        </button>
+    <!-- Affiliations Section -->
+    <section id="affiliations" class="max-w-5xl mx-auto px-6 py-20" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-12 text-center">Affiliations</h2>
+      <h3 class="text-2xl font-semibold mb-4">Industry</h3>
+      <div class="logo-grid mb-10">
+        <img src="logo-mother-dairy.webp" alt="Mother Dairy" />
+        <img src="logo-hdfc-bank.jpeg" alt="HDFC Bank" />
+        <img src="logo-zomato.png" alt="Zomato" />
+        <img src="logo-indicold.png" alt="Indicold" />
+        <img src="logo-unacademy.png" alt="Unacademy" />
+        <img src="logo-tata-trusts.png" alt="Tata Trusts" />
+        <img src="logo-big-league.png" alt="The Big League" />
       </div>
-    </nav>
+      <h3 class="text-2xl font-semibold mb-4">Academic</h3>
+      <div class="logo-grid">
+        <img src="irma.png" alt="IRMA" />
+        <img src="logo-svpuat.jpeg" alt="SVPUAT" />
+        <img src="logo-university-illinois.png" alt="University of Illinois" />
+      </div>
+    </section>
 
-    <!-- MAIN -->
-    <main class="max-w-4xl mx-auto px-6 py-12 space-y-20">
-      <section id="about" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-4">About</h2>
-        <p>I am a Product Manager with experience in building financial products for both B2B and B2C segments. With a background in Finance and Technology, I specialize in designing scalable systems and seamless user experiences.</p>
-      </section>
+    <!-- Contact Section -->
+    <section id="contact" class="text-center px-6 py-20" data-aos="fade-up">
+      <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
+      <p class="mb-6">Connect with me on <a href="https://www.linkedin.com/in/sachinguptanxt/" class="underline">LinkedIn</a> or drop a message via email.</p>
+    </section>
 
-      <section id="projects" data-aos="fade-up">
-  <h2 class="text-3xl font-bold mb-8">Projects</h2>
-  <div class="grid gap-6 md:grid-cols-2">
-    
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg transform transition duration-300 hover:shadow-2xl hover:scale-[1.02]" data-aos="fade-up">
-      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">UIDAI eKYC Integration</h3>
-      <p class="text-gray-700 dark:text-gray-300">Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.</p>
-      <p class="mt-2 font-semibold text-gray-900 dark:text-white">Outcome:</p>
-      <p class="text-gray-700 dark:text-gray-300">Enabled the bank’s first vertical using UIDAI API, saving over ₹12L annually.</p>
-    </div>
-
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg transform transition duration-300 hover:shadow-2xl hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="100">
-      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Decommissioning Legacy LOS</h3>
-      <p class="text-gray-700 dark:text-gray-300">Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. Created data flows, screens, and a new BRE to handle complex loan logic.</p>
-      <p class="mt-2 font-semibold text-gray-900 dark:text-white">Outcome:</p>
-      <p class="text-gray-700 dark:text-gray-300">Delivered a flexible, modern lending system—reduced tech debt and enabled faster launches.</p>
-    </div>
-
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg transform transition duration-300 hover:shadow-2xl hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="200">
-      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Managing Government Business</h3>
-      <p class="text-gray-700 dark:text-gray-300">Led internal systems to support government lending programs like NRLM, NULM, and SHG. Improved PSL tracking and SMF categorization.</p>
-      <p class="mt-2 font-semibold text-gray-900 dark:text-white">Outcome:</p>
-      <p class="text-gray-700 dark:text-gray-300">Helped the bank stay compliant with RBI PSL mandates and reduce manual intervention.</p>
-    </div>
-
-    <div class="bg-white dark:bg-gray-800 p-6 rounded-2xl shadow-lg transform transition duration-300 hover:shadow-2xl hover:scale-[1.02]" data-aos="fade-up" data-aos-delay="300">
-      <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Product Strategy at AIC-IL</h3>
-      <p class="text-gray-700 dark:text-gray-300">Developed a product strategy for a cold-chain agri supply chain startup. Conducted market research, built customer personas, and refined business and revenue models to align with rural supply chain needs.</p>
-      <p class="mt-2 font-semibold text-gray-900 dark:text-white">Outcome:</p>
-      <p class="text-gray-700 dark:text-gray-300">Enabled fundraising and product-market fit in the institutional buyer segment.</p>
-    </div>
-
-  </div>
-</section>
-
-
-      <section id="affiliations" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-6">Industry Affiliations</h2>
-        <div class="logo-grid mb-10">
-          <img src="logo-mother-dairy.webp" alt="Mother Dairy" />
-          <img src="logo-hdfc-bank.jpeg" alt="HDFC Bank" />
-          <img src="logo-zomato.png" alt="Zomato" />
-          <img src="logo-indicold.png" alt="Indicold" />
-          <img src="logo-unacademy.png" alt="Unacademy" />
-          <img src="logo-tata-trusts.png" alt="Tata Trusts" />
-          <img src="logo-big-league.png" alt="The Big League" />
-        </div>
-
-        <h2 class="text-3xl font-bold mb-6">Academic Affiliations</h2>
-        <div class="logo-grid">
-          <img src="irma.png" alt="IRMA" />
-          <img src="logo-svpuat.jpeg" alt="SVPUAT" />
-          <img src="logo-university-illinois.png" alt="University of Illinois" />
-        </div>
-      </section>
-
-      <section id="contact" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-4">Contact</h2>
-        <p>Feel free to connect with me on <a href="https://www.linkedin.com/in/sachinguptanxt/" class="underline">LinkedIn</a>.</p>
-      </section>
-
-      <section id="resume" data-aos="fade-up">
-        <h2 class="text-3xl font-bold mb-4">Resume</h2>
-        <a href="Sachin Gupta_ Product.pdf" download class="underline">Download Resume</a>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="bg-black text-white py-6 text-center">
+    <footer class="text-center text-gray-500 py-10">
       &copy; 2025 Sachin Gupta. All rights reserved.
     </footer>
 
-    <!-- JS for Theme & Menu -->
     <script>
       AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
-
-      const themeToggleButton = document.getElementById("theme-toggle");
-      const currentTheme = localStorage.getItem("theme") || "dark";
-      document.body.classList.add(currentTheme);
-
-      themeToggleButton.addEventListener("click", () => {
-        if (document.body.classList.contains("dark")) {
-          document.body.classList.replace("dark", "light");
-          localStorage.setItem("theme", "light");
-        } else {
-          document.body.classList.replace("light", "dark");
-          localStorage.setItem("theme", "dark");
-        }
-      });
-
-      const hamburgerButton = document.getElementById("hamburger");
-      const mobileMenu = document.getElementById("mobile-menu");
-
-      hamburgerButton.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
     </script>
   </body>
 </html>
