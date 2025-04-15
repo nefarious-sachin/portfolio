@@ -16,13 +16,13 @@
       }
 
       body.dark {
-        background-color: #111827; /* Proper dark background */
-        color: #e5e5e5;             /* Light text for dark mode */
+        background-color: #111827;
+        color: #e5e5e5;
       }
 
       body.light {
-        background-color: #ffffff; /* Light background */
-        color: #111827;             /* Dark text for light mode */
+        background-color: #ffffff;
+        color: #111827;
       }
 
       nav.sticky-nav a {
@@ -57,7 +57,7 @@
 
       /* Project Card Style */
       .project-card {
-        background-color: #1f2937; /* Dark background for card */
+        background-color: #1f2937;
         border-radius: 10px;
         overflow: hidden;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -89,6 +89,33 @@
       .project-card:hover {
         transform: scale(1.05);
         box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      }
+
+      /* Apple-like Gradient for Sections */
+      .gradient-bg {
+        background: linear-gradient(135deg, #a1c4fd, #c2e9fb); /* Light blue gradient */
+      }
+
+      /* Sticky About Section with Hover Effects */
+      #about {
+        position: sticky;
+        top: 20px;
+        font-size: 1rem; /* Smaller font */
+        transition: font-size 0.3s ease, transform 0.3s ease;
+      }
+
+      #about:hover {
+        font-size: 1.25rem; /* Increase font size on hover */
+        transform: scale(1.05);
+        opacity: 1;
+      }
+
+      #about p {
+        transition: opacity 0.3s ease;
+      }
+
+      #about:hover p {
+        opacity: 1; /* Text becomes fully visible on hover */
       }
     </style>
   </head>
@@ -124,7 +151,7 @@
 
     <!-- MAIN -->
     <main class="max-w-4xl mx-auto px-6 py-12 space-y-20">
-      <section id="about" data-aos="fade-up">
+      <section id="about" class="gradient-bg" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-4">About</h2>
         <p>I am a Product Manager with experience in building financial products for both B2B and B2C segments. With a background in Finance and Technology, I specialize in designing scalable systems and seamless user experiences.</p>
       </section>
