@@ -3,117 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sachin Gupta - Product Manager</title>
+    <title>Sachin Gupta - Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
       body {
         font-family: 'Inter', sans-serif;
+        background-color: #0a0a0a;
+        color: white;
+        cursor: none;
       }
-      .project-box {
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        padding: 1.5rem;
-        border-radius: 1rem;
-        transition: all 0.3s ease;
+
+      .cursor {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #ffffff;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        z-index: 1000;
+        transition: transform 0.15s ease, width 0.3s ease, height 0.3s ease;
       }
-      .project-box:hover {
-        transform: translateY(-5px);
-        background: rgba(255, 255, 255, 0.1);
+
+      .magnetic:hover .cursor {
+        transform: scale(1.5);
       }
-      .logo-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-        gap: 1rem;
-        align-items: center;
-      }
-      .logo-grid img {
-        max-height: 60px;
-        object-fit: contain;
-        margin: auto;
+
+      .hover-target:hover {
+        transform: scale(1.02);
+        transition: transform 0.3s ease;
       }
     </style>
   </head>
-  <body class="bg-black text-white">
-    <!-- Hero Section -->
-    <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-      <h1 class="text-5xl font-bold mb-4">Hi, I'm Sachin Gupta</h1>
-      <p class="text-xl mb-6 max-w-2xl">I am a Passionate Product Manager !!
-            Well, I am a product manager now, But I never dreamt of becoming one until my MBA. 
-I have always thought of becoming a banker or somthing interesting. But look where the luck brought me ? 
-        I am a Product maneger in a bank. 
-        I have always been the jack of all trades, now I am tring to become master of 1. 1 by 1. 
-        
-        
-        Currently I love building scalable B2B/B2C financial solutions. Obsessed with design, systems, and outcomes.</p>
-      <div class="space-x-4">
-        <a href="#projects" class="px-6 py-2 border rounded-full hover:bg-white hover:text-black transition">View Projects</a>
-        <a href="Sachin Gupta_ Product.pdf" class="px-6 py-2 border rounded-full hover:bg-white hover:text-black transition">Download Resume</a>
-      </div>
-    </section>
+  <body>
+    <div class="cursor" id="custom-cursor"></div>
 
-    <!-- Projects Section -->
-    <section id="projects" class="max-w-5xl mx-auto px-6 py-20" data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-12 text-center">Projects</h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div class="project-box">
-          <h3 class="text-2xl font-semibold mb-2">UIDAI eKYC Integration</h3>
-          <p>Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication.</p>
-          <p class="mt-2 text-sm text-gray-400">Outcome: Saved ₹12L annually with real-time verification.</p>
-        </div>
-        <div class="project-box">
-          <h3 class="text-2xl font-semibold mb-2">Decommissioning Legacy LOS</h3>
-          <p>Redesigned a legacy system into a modular platform integrated with LMS and other systems.</p>
-          <p class="mt-2 text-sm text-gray-400">Outcome: Reduced tech debt, faster feature rollout.</p>
-        </div>
-        <div class="project-box">
-          <h3 class="text-2xl font-semibold mb-2">Managing Government Business</h3>
-          <p>Improved PSL tracking and SMF categorization for lending under government schemes.</p>
-          <p class="mt-2 text-sm text-gray-400">Outcome: Increased compliance and reduced manual work.</p>
-        </div>
-        <div class="project-box">
-          <h3 class="text-2xl font-semibold mb-2">Product Strategy at AIC-IL</h3>
-          <p>Developed strategy for a cold-chain agri supply startup, refining product-market fit and fundraising.</p>
-          <p class="mt-2 text-sm text-gray-400">Outcome: Enabled institutional traction and funding.</p>
-        </div>
+    <header class="h-screen flex items-center justify-center text-center">
+      <div>
+        <h1 class="text-5xl font-bold">Sachin Gupta</h1>
+        <p class="text-xl mt-4">Product Manager | Building financial experiences</p>
       </div>
-    </section>
+    </header>
 
-    <!-- Affiliations Section -->
-    <section id="affiliations" class="max-w-5xl mx-auto px-6 py-20" data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-12 text-center">Affiliations</h2>
-      <h3 class="text-2xl font-semibold mb-4">Industry</h3>
-      <div class="logo-grid mb-10">
-        <img src="logo-mother-dairy.webp" alt="Mother Dairy" />
-        <img src="logo-hdfc-bank.jpeg" alt="HDFC Bank" />
-        <img src="logo-zomato.png" alt="Zomato" />
-        <img src="logo-indicold.png" alt="Indicold" />
-        <img src="logo-unacademy.png" alt="Unacademy" />
-        <img src="logo-tata-trusts.png" alt="Tata Trusts" />
-        <img src="logo-big-league.png" alt="The Big League" />
-      </div>
-      <h3 class="text-2xl font-semibold mb-4">Academic</h3>
-      <div class="logo-grid">
-        <img src="irma.png" alt="IRMA" />
-        <img src="logo-svpuat.jpeg" alt="SVPUAT" />
-        <img src="logo-university-illinois.png" alt="University of Illinois" />
-      </div>
-    </section>
+    <main class="max-w-4xl mx-auto px-4 space-y-24">
+      <section id="about">
+        <h2 class="text-3xl font-bold mb-4">About</h2>
+        <p class="text-gray-300">Your about content goes here...</p>
+      </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="text-center px-6 py-20" data-aos="fade-up">
-      <h2 class="text-4xl font-bold mb-4">Get In Touch</h2>
-      <p class="mb-6">Connect with me on <a href="https://www.linkedin.com/in/sachinguptanxt/" class="underline">LinkedIn</a> or drop a message via email.</p>
-    </section>
+      <section id="experience">
+        <h2 class="text-3xl font-bold mb-4">Experience</h2>
+        <div class="space-y-6">
+          <!-- Repeatable job card -->
+          <div class="p-6 bg-gray-900 rounded-lg shadow-lg hover-target">
+            <h3 class="text-xl font-semibold">Role at Company</h3>
+            <p class="text-gray-400 text-sm">Duration</p>
+            <p class="mt-2 text-gray-300">Short description about role...</p>
+          </div>
+        </div>
+      </section>
 
-    <footer class="text-center text-gray-500 py-10">
-      &copy; 2025 Sachin Gupta. All rights reserved.
+      <section id="projects">
+        <h2 class="text-3xl font-bold mb-4">Projects</h2>
+        <div class="grid md:grid-cols-2 gap-6">
+          <!-- Repeatable project card -->
+          <div class="p-6 bg-gray-900 rounded-lg shadow-lg hover-target">
+            <h3 class="text-xl font-semibold">Project Title</h3>
+            <p class="text-gray-300 mt-2">Short project description...</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-8 text-gray-600">
+      &copy; 2025 Sachin Gupta
     </footer>
 
     <script>
-      AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+      const cursor = document.getElementById('custom-cursor');
+
+      document.addEventListener('mousemove', e => {
+        cursor.style.top = `${e.clientY}px`;
+        cursor.style.left = `${e.clientX}px`;
+      });
+
+      document.querySelectorAll('.hover-target').forEach(el => {
+        el.addEventListener('mouseenter', () => {
+          cursor.style.transform = 'translate(-50%, -50%) scale(2)';
+        });
+        el.addEventListener('mouseleave', () => {
+          cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+        });
+      });
     </script>
   </body>
 </html>
