@@ -13,8 +13,16 @@
       body {
         font-family: 'Poppins', sans-serif;
         transition: background-color 0.3s, color 0.3s;
-        background-color: #ffffff; /* White background */
-        color: #111827; /* Dark text for light mode */
+      }
+
+      body.dark {
+        background-color: #111827; /* Proper dark background */
+        color: #e5e5e5;             /* Light text for dark mode */
+      }
+
+      body.light {
+        background-color: #ffffff; /* Light background */
+        color: #111827;             /* Dark text for light mode */
       }
 
       nav.sticky-nav a {
@@ -25,9 +33,8 @@
         color: #ffffff;
       }
 
-      /* Updated header with blue background */
       header {
-        background-color: #007bff; /* Blue background */
+        background-color: #1f2937;
       }
 
       #hamburger {
@@ -48,33 +55,44 @@
         align-items: center;
       }
 
-      /* Project card hover effect */
-      .project-box {
-        background-color: #f8fafc;
-        padding: 2rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s, box-shadow 0.3s;
+      /* Project Card Style */
+      .project-card {
+        background-color: #1f2937; /* Dark background for card */
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: relative;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
-      .project-box:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      .project-card .content {
+        padding: 16px;
+        color: #e5e5e5;
       }
 
-      .project-box h3 {
+      .project-card .content h3 {
         font-size: 1.25rem;
         font-weight: 600;
       }
 
-      /* Footer */
-      footer {
-        background-color: #1f2937; /* Navy blue footer */
-        color: white;
+      .project-card .content p {
+        margin-top: 8px;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      .project-card .content .outcome {
+        font-weight: 600;
+        margin-top: 8px;
+      }
+
+      .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
       }
     </style>
   </head>
-  <body>
+  <body class="dark font-sans">
     <!-- HEADER -->
     <header class="hero py-6 px-8 shadow-md">
       <div class="max-w-7xl mx-auto flex justify-between items-center">
@@ -113,31 +131,35 @@
 
       <section id="projects" data-aos="fade-up">
         <h2 class="text-3xl font-bold mb-8">Projects</h2>
-        <div class="space-y-6">
-          <!-- Each Project Box -->
-          <div class="project-box">
-            <h3 class="text-xl font-bold">UIDAI eKYC Integration</h3>
-            <p>Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.</p>
-            <p class="mt-2 font-semibold">Outcome:</p>
-            <p>Enabled the bank’s first vertical using UIDAI API, saving over ₹12L annually.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Each Project Card -->
+          <div class="project-card">
+            <div class="content">
+              <h3>UIDAI eKYC Integration</h3>
+              <p>Integrated UIDAI’s eKYC API into the bank’s onboarding flow for real-time borrower authentication. Led API design, built secure ADV storage, and overcame regulatory and data mapping challenges.</p>
+              <p class="outcome">Outcome: Enabled the bank’s first vertical using UIDAI API, saving over ₹12L annually.</p>
+            </div>
           </div>
-          <div class="project-box">
-            <h3 class="text-xl font-bold">Decommissioning Legacy LOS</h3>
-            <p>Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. Created data flows, screens, and a new BRE to handle complex loan logic.</p>
-            <p class="mt-2 font-semibold">Outcome:</p>
-            <p>Delivered a flexible, modern lending system—reduced tech debt and enabled faster launches.</p>
+          <div class="project-card">
+            <div class="content">
+              <h3>Decommissioning Legacy LOS</h3>
+              <p>Spearheaded the redesign of a rigid LOS into a modular platform integrated with LMS, Collection, and API systems. Created data flows, screens, and a new BRE to handle complex loan logic.</p>
+              <p class="outcome">Outcome: Delivered a flexible, modern lending system—reduced tech debt and enabled faster launches.</p>
+            </div>
           </div>
-          <div class="project-box">
-            <h3 class="text-xl font-bold">Managing Government Business</h3>
-            <p>Led internal systems to support government lending programs like NRLM, NULM, and SHG. Improved PSL tracking and SMF categorization.</p>
-            <p class="mt-2 font-semibold">Outcome:</p>
-            <p>Helped the bank stay compliant with RBI PSL mandates and reduce manual intervention.</p>
+          <div class="project-card">
+            <div class="content">
+              <h3>Managing Government Business</h3>
+              <p>Led internal systems to support government lending programs like NRLM, NULM, and SHG. Improved PSL tracking and SMF categorization.</p>
+              <p class="outcome">Outcome: Helped the bank stay compliant with RBI PSL mandates and reduce manual intervention.</p>
+            </div>
           </div>
-          <div class="project-box">
-            <h3 class="text-xl font-bold">Product Strategy at AIC-IL</h3>
-            <p>Developed a product strategy for a cold-chain agri supply chain startup. Conducted market research, built customer personas, and refined business and revenue models to align with rural supply chain needs.</p>
-            <p class="mt-2 font-semibold">Outcome:</p>
-            <p>Enabled fundraising and product-market fit in the institutional buyer segment.</p>
+          <div class="project-card">
+            <div class="content">
+              <h3>Product Strategy at AIC-IL</h3>
+              <p>Developed a product strategy for a cold-chain agri supply chain startup. Conducted market research, built customer personas, and refined business and revenue models to align with rural supply chain needs.</p>
+              <p class="outcome">Outcome: Enabled fundraising and product-market fit in the institutional buyer segment.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -177,5 +199,17 @@
     <footer class="bg-black text-white py-6 text-center">
       &copy; 2025 Sachin Gupta. All rights reserved.
     </footer>
+
+    <!-- JS for Menu -->
+    <script>
+      AOS.init({ duration: 1000, easing: 'ease-in-out', once: true });
+
+      const hamburgerButton = document.getElementById("hamburger");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      hamburgerButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
   </body>
 </html>
