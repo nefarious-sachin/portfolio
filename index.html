@@ -113,6 +113,7 @@
       .hero-content {
         max-width: 1200px;
         margin: 0 auto;
+        padding: 0 20px;
       }
 
       .hero-subtitle {
@@ -144,9 +145,9 @@
         color: var(--secondary);
       }
 
-      /* Sections - Adjusted spacing to match your live site */
+      /* Sections */
       section {
-        padding: 80px 0;
+        padding: 80px 20px;
         max-width: 1200px;
         margin: 0 auto;
       }
@@ -182,7 +183,7 @@
       .project-card {
         background-color: rgba(100, 255, 218, 0.05);
         border-radius: 4px;
-        padding: 2rem;
+        padding: 1.5rem;
         transition: all 0.3s ease;
         height: 100%;
       }
@@ -230,7 +231,7 @@
       /* Footer */
       footer {
         text-align: center;
-        padding: 2rem 0;
+        padding: 2rem 20px;
         font-size: 0.8rem;
         color: var(--slate);
       }
@@ -276,27 +277,40 @@
           font-size: 2.5rem;
         }
 
-        /* Mobile padding fixes */
-        .hero-content,
-        section {
-          padding-left: 20px;
-          padding-right: 20px;
-        }
-        
+        /* Improved mobile project grid */
         .project-grid {
           grid-template-columns: 1fr;
-          padding: 0 15px;
+          gap: 1rem;
+          padding: 0 10px;
         }
-        
-        #affiliations,
-        #academic {
-          padding-left: 20px;
-          padding-right: 20px;
+
+        .project-card {
+          padding: 1.25rem;
         }
 
         /* Adjusted mobile spacing */
         section {
-          padding: 60px 0;
+          padding: 60px 20px;
+        }
+
+        /* Ensure text doesn't touch edges */
+        .hero-content,
+        section,
+        footer {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        /* Extra small devices */
+        .project-card {
+          padding: 1rem;
+        }
+        
+        .logo-grid {
+          grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+          gap: 1.5rem;
         }
       }
     </style>
