@@ -133,9 +133,20 @@
         margin: 1.5rem 0 2rem;
       }
 
-      /* Sections */
+      /* Financial Products Highlight */
+      .financial-highlight {
+        color: var(--dark-slate);
+        transition: color 0.3s ease;
+        display: inline-block;
+      }
+
+      .financial-highlight:hover {
+        color: var(--secondary);
+      }
+
+      /* Sections - Adjusted spacing to match your live site */
       section {
-        padding: 35px 0;
+        padding: 80px 0;
         max-width: 1200px;
         margin: 0 auto;
       }
@@ -143,7 +154,7 @@
       .section-title {
         display: flex;
         align-items: center;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
       }
 
       .section-title h2 {
@@ -165,6 +176,7 @@
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
         gap: 1.5rem;
+        margin-top: 2rem;
       }
 
       .project-card {
@@ -200,6 +212,7 @@
         grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
         gap: 2rem;
         place-items: center;
+        margin-top: 2rem;
       }
 
       .logo-grid img {
@@ -256,13 +269,14 @@
         .hero {
           padding-top: 100px;
           height: auto;
+          padding-bottom: 80px;
         }
 
         .hero-title {
           font-size: 2.5rem;
         }
 
-        /* New mobile padding fixes */
+        /* Mobile padding fixes */
         .hero-content,
         section {
           padding-left: 20px;
@@ -278,6 +292,11 @@
         #academic {
           padding-left: 20px;
           padding-right: 20px;
+        }
+
+        /* Adjusted mobile spacing */
+        section {
+          padding: 60px 0;
         }
       }
     </style>
@@ -305,7 +324,7 @@
       <div class="hero-content">
         <p class="hero-subtitle">Hi, my name is</p>
         <h1 class="hero-title">Sachin Gupta.</h1>
-        <h2 class="hero-title" style="color: var(--dark-slate)">I build financial products.</h2>
+        <h2 class="hero-title"><span class="financial-highlight">I build financial products.</span></h2>
         <p class="hero-description">
           I'm a Product Manager specializing in building financial products for both B2B and B2C segments. 
           Currently, I'm focused on designing scalable systems and seamless user experiences at India's largest 
